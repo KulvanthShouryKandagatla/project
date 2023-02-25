@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+            body
+{
+    background-image: url('back.gif');
+    color:white;
+    font-family: comic sans MS,consolas;
+    font-size: 23px;
+}
+b{
+    font-family: stencil,jokerman;
+    font-size: 30px;
+    text-shadow:  5px 5px rgb(73, 84, 94);
+}
+input
+{
+    border-radius: 5px;
+}
+textarea
+{
+    border-radius: 5px;
+}
+        </style>
+        <script>
+            function validate(){ 
+                var num=document.myform.num.value; 
+                if (isNaN(num)){ document.getElementById("numloc").innerHTML="Enter Numeric value only";
+return false; }
+else if(num.length==10) { alert("Valid");
+}
+else{ alert("Enter 10 digit Mobile Number Only"); 
+return false; }}
+function validation() {
+    var a = document.myform.fname.value;
+     if(a=="") alert("Please Enter Your Name");
+      
+      if(!isNaN(a)) 
+       alert("Please Enter Only Characters"); 
+    }
+        </script>
+    </head>
+    <body>
+        <center><b>SPORTS CLUB Registration Form</b></center>
+        <form name="myform">
+            <fieldset>
+                <legend></legend>
+                
+                <table cellspacing="10px">
+                    <tr>
+                        <td>First Name</td>
+                        <td><input type="text" name="fname" required></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="lname" required></td>
+                    </tr>
+                    <tr>
+                        <td>Roll Number</td>
+                        <td><input type="text" name="roll" required></td>
+                    </tr>
+                    <tr>
+                        <td>Date Of Birth</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="Radio" name="G" value="1" checked>Male<input type="Radio" name="G" value="2">Female</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Number</td>
+                        <td><input type="text" name="num" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email ID</td>
+                        <td><input type="text" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Which Sports Are You Intrested In ?</td>
+                        <td><input type="checkbox" name="cricket">Cricket
+                            <input type="checkbox" name="g+football">Football
+                            <input type="checkbox" name="volleyball">Volleball
+                            <input type="checkbox" name="Badminton">Badminton
+                            <input type="checkbox" name="basket Ball">Basket Ball<br>
+                            <input type="checkbox" name="TT">Table Tennis
+                            
+
+                        
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>Drop any suggestions and queries here </td>
+                         <td><textarea rows="5" cols="30"></textarea></td>       
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" ></td>
+                        <td><input type="Submit" onclick="validate()"></td>
+                    </tr>
+                </table>
+                
+            </fieldset>
+        </form>
+    </body>
+</html>
